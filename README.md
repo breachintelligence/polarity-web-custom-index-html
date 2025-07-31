@@ -37,12 +37,21 @@ A Bash utility that lets you inject your own JavaScript into the _index.html_ sh
 
 1. Copy the script somewhere in your PATH:
 ```bash
-cp copy-polarity-web.sh /home/user
+cp copy-polarity-web.sh /home/<user>
 ```
 
-2. Make it executable:
+Alternatively, clone this repository into your user directory
+
+> Replace {{user}} with your user directory 
+```
+cd /home/{{user}}
+git clone https://github.com/breachintelligence/polarity-web-custom-index-html.git
+cd polarity-web-custom-index-html
+```
+
+2. Make the `copy-polarity-web.sh` script executable:
 ```bash
-chmod +x /home/user/copy-polarity-web.sh
+chmod +x copy-polarity-web.sh
 ```
 
 3. Place your custom JavaScript (default: script.js) in the same directory or supply another path when prompted.
@@ -50,7 +59,7 @@ chmod +x /home/user/copy-polarity-web.sh
 
 4. Run it:
 ```bash
-inject-polarity-web.sh
+./copy-polarity-web.sh
 ```
 
 5. Edit /app/docker-compose.yml and add the bind-mount:
@@ -72,6 +81,8 @@ cd /app && ./down.sh && ./up.sh
 ```bash
 sudo chcon -Rt svirt_sandbox_file_t /app/polarity-web-modified
 ```
+
+8. Re-run the script anytime Polarity Web is updated.  Modifying the `docker-compose.yml` should be a one-time operation unless the compose file has been overwritten.
 
 ## In Script Configuration Variables
 
