@@ -1,4 +1,4 @@
-# Polarity Web Custom-Script Injector
+# Polarity Web Custom-Script Injector v1.0.0
 
 A Bash utility that lets you inject your own JavaScript into the _index.html_ shipped inside Polarity Web’s Docker image and bind-mount the modified assets into your running stack.  Useful for cases where a customer needs to run custom tracking or agent code in the web application.
 

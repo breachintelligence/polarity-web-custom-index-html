@@ -3,6 +3,7 @@ set -euo pipefail
 
 # ============================================================== 
 # Polarity Web custom-script injector
+# v1.0.0
 # ============================================================== 
 # Copies Polarity Web assets from a user-selected Docker image,
 # injects custom JavaScript into index.html, and writes the result
